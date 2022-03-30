@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hidden Object</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<style type="text/css">
+		.body{
+            background-image: url(background.jpg);
+			background-size: cover;
+		}
+		.herobrine1{
+			position: absolute;
+			height: 100px;
+			width: 50px;
+			margin-top: 200px;
+			margin-left: 500px;
+		}
+		.shot{
+
+		}
+		.herobrine2{
+			position: absolute;
+			height: 100px;
+			width: 50px;
+			margin-top: 500px;
+			margin-left: 1500px;
+		}
+		.herobrine3{
+			position: absolute;
+			height: 100px;
+			width: 50px;
+			margin-top: 850px;
+		}
+	</style>
+</head>
+<body class="body">
+ <div class="col-2 m-auto" style="height: 100px;">
+	<h1><span class="shot">0</span>/3</h1>
+ </div>
+ <img class="herobrine1" src="object.png">
+ <img class="herobrine2" src="object.png">
+ <img class="herobrine3" src="object.png">
+<script type="text/javascript">
+	let ammo = 0;
+
+    document.querySelector('.herobrine1').onclick = function() {
+	 ammo = ammo + 1
+	 document.querySelector('.herobrine1').style.display = "line-through"
+	 document.querySelector('.shot').innerHTML = ammo
+	 document.querySelector('.herobrine1').style.display = "none"
+    }
+    document.querySelector('.herobrine2').onclick = function() {
+	 ammo = ammo + 1
+	 document.querySelector('.herobrine2').style.display = "line-through"
+	 document.querySelector('.shot').innerHTML = ammo
+	 document.querySelector('.herobrine2').style.display = "none"
+    }
+    document.querySelector('.herobrine3').onclick = function() {
+	 ammo = ammo + 1
+	 document.querySelector('.herobrine3').style.display = "line-through"
+	 document.querySelector('.shot').innerHTML = ammo
+	 document.querySelector('.herobrine3').style.display = "none"
+    }
+</script>
+</body>
+</html>
